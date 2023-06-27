@@ -17,7 +17,7 @@ public class Main {
         Stream<String> ioNumberStream = Stream.of("I26", "I17", "I29", "O71");
         Stream<String> inNumberStream = Stream.of("N40", "N36", "I26", "I17","I29", "O71");
         Stream<String> concatStream = Stream.concat(ioNumberStream, inNumberStream);
-        System.out.println("___________________________");
+        System.out.println("\n___________________________");
         System.out.println("Counts with no duplicates " + concatStream.distinct().count());
         System.out.println("___________________________");
 
