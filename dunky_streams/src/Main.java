@@ -1,12 +1,13 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
 
-        List<String> someNumbers = Arrays.asList(
+        List<String> someArrayNumbers = Arrays.asList(
                 "N40", "N36",
                 "B12", "B6",
                 "G53", "G49", "G60", "G50", "g64",
@@ -37,12 +38,16 @@ public class Main {
 //
 //        gNumbers.forEach((String s) -> System.out.println(s));
 
-        someNumbers
+        someArrayNumbers
                 .stream()
                 .map(String::toUpperCase)
                 .filter(s->s.startsWith("G"))
                 .sorted()
-                .forEach(System.out::println);
+                .collect(Collectors.toList());
+
+        for(String s : someArrayNumbers){
+            System.out.println(s);
+        }
 
 
         // Declaring Employee objects.
