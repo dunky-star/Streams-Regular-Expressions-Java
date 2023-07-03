@@ -74,6 +74,13 @@ public class Main {
         departments.stream()
                 .flatMap(department -> department.getEmployee().stream())
                 .forEach(System.out::println);
+
+        System.out.println("\n___The youngest employees___");
+        departments.stream()
+                .flatMap(department -> department.getEmployee().stream())
+                .reduce((e1, e2) -> e1.getAge() < e2.getAge() ? e1 : e2)
+                .ifPresent(System.out::println);
+
     }
 
 }
