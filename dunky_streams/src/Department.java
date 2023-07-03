@@ -2,11 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Department {
-    private String name;
+    //private final String name;
     private final List<Employee> employees;
 
     public Department(String name){
-        this.name = name;
+         // this.name = name;
         employees = new ArrayList<>();
     }
 
