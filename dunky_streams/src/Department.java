@@ -10,7 +10,8 @@ public class Department {
         employees = new ArrayList<>();
     }
 
-    public void addEmployee(Employee employee){
+    public void addEmployee(Employee employee)
+    {
         employees.add(employee);
     }
 

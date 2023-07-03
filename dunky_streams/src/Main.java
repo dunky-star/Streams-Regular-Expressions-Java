@@ -60,6 +60,15 @@ public class Main {
         Department sales = new Department("Sales");
         sales.addEmployee(chris);
 
+        // Printing
+        List<Department> departments = new ArrayList<>();
+        departments.add(tech);
+        departments.add(sales);
+
+        System.out.println("\n___Department Employees___");
+        departments.stream()
+                .flatMap(department -> department.getEmployee().stream())
+                .forEach(System.out::println);
     }
 
 }
