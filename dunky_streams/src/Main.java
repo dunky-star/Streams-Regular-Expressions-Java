@@ -44,5 +44,22 @@ public class Main {
                 .sorted()
                 .forEach(System.out::println);
 
+
+        // Declaring Employee objects.
+        Employee john = new Employee("John Doe", 30);
+        Employee jane = new Employee("Jane Hill", 32);
+        Employee jack = new Employee("Jack Monroe", 45);
+        Employee chris = new Employee("Chris Rock", 22);
+
+        // Declaring Department objects.
+        Department tech = new Department("Technology");
+        tech.addEmployee(john);
+        tech.addEmployee(jane);
+        tech.addEmployee(jack);
+
+        Department sales = new Department("Sales");
+        sales.addEmployee(chris);
+
     }
+
 }
