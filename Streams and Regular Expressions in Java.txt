@@ -1,7 +1,7 @@
 Java Streams - Is a sequence of computation (it was introduced in Java 8).
 
 
-Regular Expression - Is a way to describe a string or a pattern.
+Regular Expression - Is a way to describe a string or a pattern/ often used to [search] string for a particular pattern.
 
 
 

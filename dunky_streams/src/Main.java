@@ -82,6 +82,13 @@ public class Main {
                 .reduce((e1, e2) -> e1.getAge() < e2.getAge() ? e1 : e2)
                 .ifPresent(System.out::println);
 
+
+        // Regular expressions
+        String string = "I am a string. Yes, I am.";
+        System.out.println("\n___Regular expression in Java___");
+        System.out.println(string);
+        String myString = string.replaceAll("I", "You");
+        System.out.println(myString);
     }
 
 }
