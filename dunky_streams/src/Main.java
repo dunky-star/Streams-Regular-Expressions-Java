@@ -155,7 +155,7 @@ public class Main {
         String challenge2 = "Replace all blanks with underscore.";
         System.out.println(challenge2.replaceAll(" ", "_"));
 
-        // Challenge 3: Match a given string in it entirety.
+        // Challenge 3: Match a given string in its entirety.
         String challenge3 = "aaabccccccccdddefffg";
         System.out.println("Challenge 3 result: " + challenge3.matches("^a{3}bc{8}d{3}ef{3}g$"));
 
@@ -166,12 +166,33 @@ public class Main {
 
         // Challenge 5: "abcd.135\tuvqz.7\tttzik.999\n"
         // Write a regular expression to extract all the numbers.
-
+        System.out.println("___________Challenge 5____________");
         String challenge5 = "abcd.135\tuvqz.7\tttzik.999\n";
         Pattern pattern5 = Pattern.compile("[A-Za-z]+\\.(\\d+)\\s");
         Matcher matcher5 = pattern5.matcher(challenge5);
         while(matcher5.find()){
             System.out.println("Occurrence: " + matcher5.group(1));
+        }
+
+        // Challenge 6: "{0, 2}, {0, 5}, {1, 3}, {2, 4}"
+        // Write a regular expression to extract all the values in the enclosed by {}.
+        System.out.println("___________Challenge 6____________");
+        String challenge6= "{0, 2}, {0, 5}, {1, 3}, {2, 4}";
+        Pattern pattern6 = Pattern.compile("\\{(.+?)\\}");
+        Matcher matcher6 = pattern6.matcher(challenge6);
+        while(matcher6.find()){
+            System.out.println("Occurrence: " + matcher6.group(1));
+        }
+
+        // Challenge 7: "{0, 2}, {0, 5}, {1, 3}, {2, 4}, {x, y}, {2, 4}, {11, 12}"
+        // Write a regular expression to extract all the values in the enclosed by {}.
+
+        System.out.println("___________Challenge 7____________");
+        String challenge7= "{0, 2}, {0, 5}, {1, 3}, {2, 4}, {x, y}, {2, 4}, {11, 12}";
+        Pattern pattern7 = Pattern.compile("\\{(\\d+, \\d+)\\}");
+        Matcher matcher7 = pattern6.matcher(challenge7);
+        while(matcher7.find()){
+            System.out.println("Occurrence: " + matcher7.group(1));
         }
 
 
