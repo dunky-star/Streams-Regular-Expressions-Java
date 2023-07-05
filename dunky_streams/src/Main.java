@@ -91,7 +91,13 @@ public class Main {
         System.out.println(myString);
         String alphaNumeric = "abcDeeef12Ghiiiijkl99zuv";
         System.out.println(alphaNumeric.replaceAll(".", "P"));
+        //Matching and replacing at the beginning of the string.
         System.out.println(alphaNumeric.replaceAll("^abcDeee", "OPIYO"));
+        //Return Boolean True of False.
+        System.out.println(alphaNumeric.matches("^OPIYO"));
+        //Matching and replacing at the end of the string.
+        System.out.println(alphaNumeric.replaceAll("l99zuv$", "THE END"));
+
 
 
     }
