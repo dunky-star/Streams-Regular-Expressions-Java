@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -91,18 +93,35 @@ public class Main {
         System.out.println(myString);
         String alphaNumeric = "abcDeeef12Ghiiiijkl99387zuv";
         System.out.println(alphaNumeric.replaceAll(".", "P"));
-        //Matching and replacing at the beginning of the string.
-        System.out.println(alphaNumeric.replaceAll("^abcDeee", "OPIYO"));
-        //Return Boolean True of False.
+        // Matching and replacing at the beginning of the string.
+        System.out.println(alphaNumeric.replaceAll("^abcDe{3}", "OPIYO"));
+        // Return Boolean True of False.
         System.out.println(alphaNumeric.matches("^OPIYO"));
-        //Matching and replacing at the end of the string.
+        // Matching and replacing at the end of the string.
         System.out.println(alphaNumeric.replaceAll("l99zuv$", "THE END"));
-        //Matching and replacing specific characters.
+        // Matching and replacing specific characters.
         System.out.println(alphaNumeric.replaceAll("[aei]", "Z"));
-        //Matching and replacing all characters except ej
+        // Matching and replacing all characters except ej
         System.out.println(alphaNumeric.replaceAll("[^ej]", "T"));
-        //Matching and replacing all characters.
+        // Matching and replacing characters and numeric in a range.
         System.out.println(alphaNumeric.replaceAll("(?i)[a-f3-8]", "Q"));
+
+        // Removing a tab and a newline.
+        String whiteSpaceAlphaNumeric = "I have blanks and\ta tab, also a newline\n";
+        System.out.println(whiteSpaceAlphaNumeric);
+        System.out.println(whiteSpaceAlphaNumeric.replaceAll("\t", "D"));
+
+        StringBuilder htmlText = new StringBuilder("<h1>My Heading</h1>");
+        htmlText.append("<h2>Sub-heading</h2>");
+        htmlText.append("<p>This is a paragraph about something.</p>");
+        htmlText.append("<p>This is another paragraph about something else.</p>");
+        htmlText.append("<h2>Summary</h2>");
+        htmlText.append("<p>Here is the summary.</p>");
+
+        String h2Pattern = ".*<h2>.*";
+        Pattern pattern = Pattern.compile(h2Pattern);
+        Matcher matcher = pattern.matcher(htmlText);
+        System.out.println(matcher.matches());
 
 
 
