@@ -163,6 +163,18 @@ public class Main {
         // The letter must be followed by a period, after the period, there must be series of digits.
         String challenge4 = "abcd.1459";
         System.out.println("Challenge 4 result: " + challenge4.matches("^[A-z][a-z]+\\.\\d+$"));
+
+        // Challenge 5: "abcd.135\tuvqz.7\tttzik.999\n"
+        // Write a regular expression and extract all the numbers.
+
+        String challenge5 = "abcd.135\tuvqz.7\tttzik.999\n";
+        Pattern pattern5 = Pattern.compile("[A-Za-z]+\\.(\\d+)\\s");
+        Matcher matcher5 = pattern5.matcher(challenge5);
+        while(matcher5.find()){
+            System.out.println("Occurrence: " + matcher5.group(1));
+        }
+
+
     }
 
 }
