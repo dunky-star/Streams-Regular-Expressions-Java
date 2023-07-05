@@ -155,6 +155,10 @@ public class Main {
         String challenge2 = "Replace all blanks with underscore.";
         System.out.println(challenge2.replaceAll(" ", "_"));
 
+        // Challenge 3: Match a given string in it entirety.
+        String challenge3 = "aaabccccccccdddefffg";
+        System.out.println("Challenge 3 result: " + challenge3.matches("^a{3}bc{8}d{3}ef{3}g$"));
+
     }
 
 }
