@@ -89,6 +89,11 @@ public class Main {
         System.out.println(string);
         String myString = string.replaceAll("I", "You");
         System.out.println(myString);
+        String alphaNumeric = "abcDeeef12Ghiiiijkl99zuv";
+        System.out.println(alphaNumeric.replaceAll(".", "P"));
+        System.out.println(alphaNumeric.replaceAll("^abcDeee", "OPIYO"));
+
+
     }
 
 }
