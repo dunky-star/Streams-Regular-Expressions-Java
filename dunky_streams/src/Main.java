@@ -140,6 +140,12 @@ public class Main {
         System.out.println("\nVisa 3: " + visa3.matches("^4[0-9]{12}([0-9]{3})?$"));
         System.out.println("\nVisa 4: " + visa4.matches("^4[0-9]{12}([0-9]{3})?$"));
 
+        // Write the string literal regular expression that will match the following String.
+        // Use the String.matches() to method to verify your answer.
+        // String challenge1 = "I want a bike";
+         
+
+
 
     }
 
