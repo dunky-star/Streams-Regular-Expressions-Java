@@ -140,7 +140,7 @@ public class Main {
         System.out.println("Visa 3: " + visa3.matches("^4[0-9]{12}([0-9]{3})?$"));
         System.out.println("Visa 4: " + visa4.matches("^4[0-9]{12}([0-9]{3})?$"));
 
-        // Write the string literal regular expression that will match the following String.
+        // Challenge 1: Write the string literal regular expression that will match the following String.
         // Use the String.matches() to method to verify your answer.
         // String challenge1 = "I want a bike";
 
@@ -150,6 +150,10 @@ public class Main {
         Pattern pattern1 = Pattern.compile(regExp);
         Matcher matcher1 = pattern1.matcher(challenge1);
         System.out.println("\nChallenge 1 result: " + matcher1.matches());
+
+        // Challenge 2: Replace all blanks with an _
+        String challenge2 = "Replace all blanks with underscore.";
+        System.out.println(challenge2.replaceAll(" ", "_"));
 
     }
 
