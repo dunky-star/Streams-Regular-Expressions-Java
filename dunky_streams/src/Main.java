@@ -118,7 +118,7 @@ public class Main {
         htmlText.append("<h2>Summary</h2>");
         htmlText.append("<p>Here is the summary.</p>");
 
-        String h2Pattern = ".*<h2>.*";
+        String h2Pattern = "(<h2>)(.+?)(</h2>)";
         Pattern pattern = Pattern.compile(h2Pattern);
         Matcher matcher = pattern.matcher(htmlText);
         System.out.println(matcher.matches());
@@ -126,8 +126,7 @@ public class Main {
         matcher.reset();
         int count = 0;
         while(matcher.find()){
-            count++;
-            System.out.println("Occurrence " + count + " : " + matcher.start() + " to " + matcher.end());
+            System.out.println("Occurrence: " + matcher.group(2));
         }
 
 
