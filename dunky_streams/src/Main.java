@@ -123,6 +123,12 @@ public class Main {
         Matcher matcher = pattern.matcher(htmlText);
         System.out.println(matcher.matches());
 
+        matcher.reset();
+        int count = 0;
+        while(matcher.find()){
+            count++;
+            System.out.println("Occurrence " + count + " : " + matcher.start() + " to " + matcher.end());
+        }
 
 
     }
