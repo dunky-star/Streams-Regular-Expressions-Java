@@ -89,7 +89,7 @@ public class Main {
         System.out.println(string);
         String myString = string.replaceAll("I", "You");
         System.out.println(myString);
-        String alphaNumeric = "abcDeeef12Ghiiiijkl99zuv";
+        String alphaNumeric = "abcDeeef12Ghiiiijkl99387zuv";
         System.out.println(alphaNumeric.replaceAll(".", "P"));
         //Matching and replacing at the beginning of the string.
         System.out.println(alphaNumeric.replaceAll("^abcDeee", "OPIYO"));
@@ -101,6 +101,8 @@ public class Main {
         System.out.println(alphaNumeric.replaceAll("[aei]", "Z"));
         //Matching and replacing all characters except ej
         System.out.println(alphaNumeric.replaceAll("[^ej]", "T"));
+        //Matching and replacing all characters.
+        System.out.println(alphaNumeric.replaceAll("(?i)[a-f3-8]", "Q"));
 
 
 
