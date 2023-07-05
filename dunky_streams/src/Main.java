@@ -136,16 +136,20 @@ public class Main {
         String visa3 = "51026";
         String visa4 = "4102512345000918";
         System.out.println("\nVisa 1: " + visa1.matches("^4[0-9]{12}([0-9]{3})?$"));
-        System.out.println("\nVisa 2: " + visa2.matches("^4[0-9]{12}([0-9]{3})?$"));
-        System.out.println("\nVisa 3: " + visa3.matches("^4[0-9]{12}([0-9]{3})?$"));
-        System.out.println("\nVisa 4: " + visa4.matches("^4[0-9]{12}([0-9]{3})?$"));
+        System.out.println("Visa 2: " + visa2.matches("^4[0-9]{12}([0-9]{3})?$"));
+        System.out.println("Visa 3: " + visa3.matches("^4[0-9]{12}([0-9]{3})?$"));
+        System.out.println("Visa 4: " + visa4.matches("^4[0-9]{12}([0-9]{3})?$"));
 
         // Write the string literal regular expression that will match the following String.
         // Use the String.matches() to method to verify your answer.
         // String challenge1 = "I want a bike";
-         
 
+        String challenge1 = "I want a bike";
 
+        String regExp = "I want a \\w+";
+        Pattern pattern1 = Pattern.compile(regExp);
+        Matcher matcher1 = pattern1.matcher(challenge1);
+        System.out.println("\nChallenge 1 result: " + matcher1.matches());
 
     }
 
