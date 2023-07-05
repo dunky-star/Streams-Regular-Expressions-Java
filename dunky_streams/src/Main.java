@@ -165,7 +165,7 @@ public class Main {
         System.out.println("Challenge 4 result: " + challenge4.matches("^[A-z][a-z]+\\.\\d+$"));
 
         // Challenge 5: "abcd.135\tuvqz.7\tttzik.999\n"
-        // Write a regular expression and extract all the numbers.
+        // Write a regular expression to extract all the numbers.
 
         String challenge5 = "abcd.135\tuvqz.7\tttzik.999\n";
         Pattern pattern5 = Pattern.compile("[A-Za-z]+\\.(\\d+)\\s");
