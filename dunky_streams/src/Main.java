@@ -129,6 +129,17 @@ public class Main {
             System.out.println("Occurrence: " + matcher.group(2));
         }
 
+        // VISA Validation: ^4[0-9]{12}([0-9]{3})?$
+
+        String visa1 = "4102512345000";
+        String visa2 = "5102512345004";
+        String visa3 = "51026";
+        String visa4 = "4102512345000918";
+        System.out.println("\nVisa 1: " + visa1.matches("^4[0-9]{12}([0-9]{3})?$"));
+        System.out.println("\nVisa 2: " + visa2.matches("^4[0-9]{12}([0-9]{3})?$"));
+        System.out.println("\nVisa 3: " + visa3.matches("^4[0-9]{12}([0-9]{3})?$"));
+        System.out.println("\nVisa 4: " + visa4.matches("^4[0-9]{12}([0-9]{3})?$"));
+
 
     }
 
