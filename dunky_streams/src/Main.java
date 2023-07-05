@@ -159,6 +159,9 @@ public class Main {
         String challenge3 = "aaabccccccccdddefffg";
         System.out.println("Challenge 3 result: " + challenge3.matches("^a{3}bc{8}d{3}ef{3}g$"));
 
+        // Challenge 4:
+        String challenge4 = "abcd.1459";
+        System.out.println("Challenge 4 result: " + challenge4.matches("^[A-z][a-z]+\\.\\d+$"));
     }
 
 }
