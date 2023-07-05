@@ -97,6 +97,10 @@ public class Main {
         System.out.println(alphaNumeric.matches("^OPIYO"));
         //Matching and replacing at the end of the string.
         System.out.println(alphaNumeric.replaceAll("l99zuv$", "THE END"));
+        //Matching and replacing specific characters.
+        System.out.println(alphaNumeric.replaceAll("[aei]", "Z"));
+        //Matching and replacing all characters except ej
+        System.out.println(alphaNumeric.replaceAll("[^ej]", "T"));
 
 
 
