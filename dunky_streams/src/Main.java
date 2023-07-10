@@ -199,7 +199,7 @@ public class Main {
         // optional "_" and 4 digits.
         // Use "11111-1111" as your testing string.
         System.out.println("___________Challenge 8____________");
-        String challenge8 = "11111-1111";
+        String challenge8 = "11111-11";
         System.out.println(challenge8.matches("^\\d{5}(-\\d{4})?$"));
 
 
