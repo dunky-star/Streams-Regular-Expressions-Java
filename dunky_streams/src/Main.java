@@ -190,10 +190,17 @@ public class Main {
         System.out.println("___________Challenge 7____________");
         String challenge7= "{0, 2}, {0, 5}, {1, 3}, {2, 4}, {x, y}, {2, 4}, {11, 12}";
         Pattern pattern7 = Pattern.compile("\\{(\\d+, \\d+)\\}");
-        Matcher matcher7 = pattern6.matcher(challenge7);
+        Matcher matcher7 = pattern7.matcher(challenge7);
         while(matcher7.find()){
             System.out.println("Occurrence: " + matcher7.group(1));
         }
+
+        // Challenge 8: Write a regular expression that will match a 5-digit US zip code, followed by
+        // optional "_" and 4 digits.
+        // Use "11111-1111" as your testing string.
+        System.out.println("___________Challenge 8____________");
+        String challenge8 = "11111-1111";
+        System.out.println(challenge8.matches("^\\d{5}(-\\d{4})?$"));
 
 
     }
